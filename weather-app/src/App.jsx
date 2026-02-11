@@ -10,7 +10,7 @@ function App(){
   const fetchWeather = async(city) => {
     try{
       const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?q=Delhi&appid=${apiKey}&units=metric`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
       );
 
       const data = res.data;
@@ -42,7 +42,7 @@ function App(){
   };
 
   return(
-    <div className = "bg-[#eee] flex flex-col items-center px-5">
+    <div className = "bg-[#eee] flex flex-col items-center px-5 min-h-screen">
       <div className = "flex w-full items-center justify-between">
         <h1 className="text-blue-500 text-2xl font-bold mt-6">Weather Forecast</h1> 
         <SearchBox/>

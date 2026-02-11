@@ -8,7 +8,7 @@ const SearchBox = () => {
     };
 
     return(
-        <div className="min-h-screen flex gap-2 mt-6">    
+        <div className="bg-[#eee] flex-col items-center px-5 min-h-screen">    
             <input 
                 type="text" 
                 placeholder="Enter city name" 
