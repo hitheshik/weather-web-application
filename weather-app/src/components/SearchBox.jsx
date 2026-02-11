@@ -8,7 +8,7 @@ const SearchBox = () => {
     };
 
     return(
-        <div className="flex gap-2 mt-6">    
+        <div className="min-h-screen flex gap-2 mt-6">    
             <input 
                 type="text" 
                 placeholder="Enter city name" 
