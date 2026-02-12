@@ -25,10 +25,21 @@ const WeatherCard = ({ weather }) => {
 
     }, [weather]);
 
+    const formattedTime = date.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+    });
+
     return (
         <div className="text-center p-6 mt-6 text-black">
             <h2 className="text-2xl capitalize">{weather?.city}</h2>
-            <h2 className="text-md mt-1 uppercase">{weather?.desc}</h2>
+
+            <h2 className="text-md mt-1 uppercase">
+                {date.toLocaleDateString("en-US", {
+                    weekday: "long",
+                })}{" "} {formattedTime}
+            </h2>
 
             <div className="flex justify-center pt-7">
                 <img src={weatherImage} alt="weather icon" />
@@ -38,8 +49,10 @@ const WeatherCard = ({ weather }) => {
                 {weather?.temp}°C
             </h1>
 
+            <h1 className="text-md capitalize italic mt-10"></h1>
+
             <h1 className="text-md capitalize italic mt-2">
-                {date.toDateString()}
+                {weather?.desc}
             </h1>
 
             <div className="flex gap-5 items-center mt-10 justify-center">
