@@ -25,6 +25,7 @@ function App(){
         humidity: today.main.humidity,
         wind: today.wind.speed,
       });
+      //forecast data
 
       const daily = data.list
         .filter((item) => item.dt_txt.includes("12:00:00"))
