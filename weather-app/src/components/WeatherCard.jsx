@@ -3,6 +3,8 @@ import humidity from '../assets/humidity.png'
 import wind from '../assets/wind.png'
 import sunWithClouds from '../assets/sun-with-clouds.png'
 import rain from '../assets/rain.png'
+import winter from '../assets/winter.png'
+import summer from '../assets/summer.png'
 
 const WeatherCard = ({ weather }) => {
     const [date] = useState(new Date());
@@ -42,16 +44,14 @@ const WeatherCard = ({ weather }) => {
             </h2>
 
             <div className="flex justify-center pt-7">
-                <img src={weatherImage} alt="weather icon" />
+                <img src={humidity} className='w-full' alt="humidity" />
             </div>
 
             <h1 className="text-4xl font-medium mt-10">
                 {weather?.temp}°C
             </h1>
 
-            <h1 className="text-md capitalize italic mt-10"></h1>
-
-            <h1 className="text-md capitalize italic mt-2">
+            <h1 className="text-md capitalize italic mt-12">
                 {weather?.desc}
             </h1>
 
