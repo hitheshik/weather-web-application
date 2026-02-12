@@ -12,10 +12,16 @@ const ForecastList = ({ forecast }) => {
                             className="bg-[#f5f5f5] shadow-sm py-5 px-5 rounded-lg text-center text-black"
                         >
                             <p>{day.date}</p>
+
                             <img
                                 src={`https://openweathermap.org/img/wn/${day.icon}.png`}
-                                alt="weather icon"
+                                alt=""
+                                className="mx-auto"
                             />
+
+                            <p>{day.temp}°C</p>
+                            <p className="capitalize">{day.desc}</p>
+
                         </div>
                     );
                 })}
