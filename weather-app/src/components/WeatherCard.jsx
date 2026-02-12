@@ -1,8 +1,10 @@
-const WeatherCard = () => {
+import humidity from '../assets/humidity.png'
+const WeatherCard = ({weather}) => {
+    const[date] = useState(new Date());
     return (
         <div className="text-center p-6 mt-6 text-black">
-            <h2 className="text-2xl capitalize"></h2>
-            <h2 className="text-md mt-1 uppercase"></h2>
+            <h2 className="text-2xl capitalize">{weather?.city}</h2>
+            <h2 className="text-md mt-1 uppercase">{weather?.desc}</h2>
 
             <div className="flex justify-center pt-7">
                 <img src="" alt="" />
@@ -13,10 +15,14 @@ const WeatherCard = () => {
 
             <div className="flex gap-5 items-center mt-10 justify-center">
                 <div className="border border-blue-300 p-3 flex-items-center justify-center gp-4 round-x1">
-                    <div>
-                        <img src="" alt="" />
+                    <div className = 'w-20'>
+                        <img src={wind} className ='w-full'/>
                     </div>
-                    <div></div>
+                    <div>
+                        <p className = 'font-medium'>Wind</p>
+                        <p className='font-bold text-blue-500 text-lg'>m/s</p>
+
+                    </div>
                 </div>
             </div>
         </div>
